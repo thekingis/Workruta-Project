@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BackgroundChangingView">
+        <attr name="enterFadeDuration" format="integer"/>
+        <attr name="exitFadeDuration" format="integer"/>
+        <attr name="borderRadius" format="integer"/>
+    </declare-styleable>
+
+</resources>

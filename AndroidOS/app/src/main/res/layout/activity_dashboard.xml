@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/mainView"
+    tools:context=".DashboardAct">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/mainColor"
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="10dp">
+
+        <com.workruta.android.Views.RoundImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/default_photo"
+            android:id="@+id/photo"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:paddingStart="10dp"
+            android:layout_marginEnd="80dp"
+            android:id="@+id/nameTextView"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:lines="1"
+            android:ellipsize="end"
+            android:drawablePadding="5dp"
+            android:textSize="22sp"
+            tools:ignore="RtlSymmetry" />
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginStart="-80dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/messageIcon"
+                android:rotation="-30"
+                android:src="@drawable/ic_message"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/todo" />
+
+            <com.workruta.android.Views.RoundTextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/msgNumTextView"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:background="@color/lightRed"
+                android:textColor="@color/white"
+                android:layout_alignParentBottom="true"
+                android:visibility="invisible"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/notificationIcon"
+                android:rotation="-30"
+                android:src="@drawable/ic_notifications"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:contentDescription="@string/todo" />
+
+            <com.workruta.android.Views.RoundTextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/noteNumTextView"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="5dp"
+                android:gravity="center"
+                android:background="@color/lightRed"
+                android:textColor="@color/white"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:visibility="invisible"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/locationTextView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="50dp"
+            android:orientation="vertical"
+            android:id="@+id/holderLayout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="2:1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="MissingConstraints"
+                    android:weightSum="2"
+                    android:baselineAligned="false">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:tag="4"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/background_ash"
+                        tools:ignore="UselessParent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/create_route"
+                            android:layout_marginBottom="40dp"
+                            android:contentDescription="@string/todo" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:textColor="@color/mainColor"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:text="@string/create_a_ride"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:tag="5"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/background_ash"
+                        tools:ignore="UselessParent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/route_search"
+                            android:layout_marginBottom="40dp"
+                            android:contentDescription="@string/todo" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:textColor="@color/mainColor"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:text="@string/take_ride"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="2:1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="MissingConstraints"
+                    android:weightSum="2"
+                    android:baselineAligned="false">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:tag="6"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/background_ash"
+                        tools:ignore="UselessParent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/prev_routes"
+                            android:layout_marginBottom="40dp"
+                            android:contentDescription="@string/todo" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:textColor="@color/mainColor"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:text="@string/active_routes"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:tag="7"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/background_ash"
+                        tools:ignore="UselessParent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/history"
+                            android:layout_marginBottom="40dp"
+                            android:contentDescription="@string/todo" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:textColor="@color/mainColor"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:text="@string/history"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="2:1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="MissingConstraints"
+                    android:weightSum="2"
+                    android:baselineAligned="false">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:tag="8"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/background_ash"
+                        tools:ignore="UselessParent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/data"
+                            android:layout_marginBottom="40dp"
+                            android:contentDescription="@string/todo" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:textColor="@color/mainColor"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:text="@string/personal_data"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:tag="9"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/background_ash"
+                        tools:ignore="UselessParent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/transaction"
+                            android:layout_marginBottom="40dp"
+                            android:contentDescription="@string/todo" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:textColor="@color/mainColor"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:text="@string/transactions"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="2:1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="MissingConstraints"
+                    android:weightSum="2"
+                    android:baselineAligned="false">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:tag="10"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/background_ash"
+                        tools:ignore="UselessParent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/support"
+                            android:layout_marginBottom="40dp"
+                            android:contentDescription="@string/todo" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:textColor="@color/mainColor"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:text="@string/support"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:tag="11"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/background_ash"
+                        tools:ignore="UselessParent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/faq"
+                            android:layout_marginBottom="40dp"
+                            android:contentDescription="@string/todo" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:textColor="@color/mainColor"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:text="@string/faq"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="2:1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="MissingConstraints"
+                    android:weightSum="2"
+                    android:baselineAligned="false">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:tag="12"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/background_ash"
+                        tools:ignore="UselessParent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/about_us"
+                            android:layout_marginBottom="40dp"
+                            android:contentDescription="@string/todo" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:textColor="@color/mainColor"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:text="@string/about_workruta"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:tag="14"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/background_ash"
+                        tools:ignore="UselessParent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/logout"
+                            android:layout_marginBottom="40dp"
+                            android:contentDescription="@string/todo" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:textColor="@color/mainColor"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:text="@string/logout"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:id="@+id/menuView"
+        android:scrollbars="none"
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/locationTextView"
+        android:layout_marginStart="-280dp"
+        android:background="@color/mainColor">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/menuLayout"
+            android:paddingEnd="3dp"
+            tools:ignore="RtlSymmetry" />
+
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:background="@drawable/border_top"
+        android:id="@+id/locationTextView"
+        android:drawablePadding="5dp"
+        android:textSize="16sp"
+        android:lines="1"
+        android:ellipsize="end"
+        app:drawableStartCompat="@drawable/ic_location" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/blackFade"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:background="@color/blackFade"/>
+
+</RelativeLayout>

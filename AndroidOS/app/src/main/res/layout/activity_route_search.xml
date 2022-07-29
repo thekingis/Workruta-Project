@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/mainView"
+    tools:context=".RouteSearchActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/mainColor"
+        android:text="@string/take_ride"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/ic_arrow_back"
+        android:padding="10dp"
+        android:id="@+id/headText"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headText"
+        android:id="@+id/panel"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/border_box"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/asher"
+                android:text="@string/from"
+                android:textSize="17sp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/fromEditText"
+                android:inputType="textPostalAddress"
+                android:textSize="17sp"
+                android:ellipsize="end"
+                android:drawableEnd="@drawable/ic_location_search"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingStart="5dp"
+                tools:ignore="RtlSymmetry" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/border_box"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/asher"
+                android:text="@string/to"
+                android:textSize="17sp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/toEditText"
+                android:textColor="@color/black"
+                android:inputType="textPostalAddress"
+                android:drawableEnd="@drawable/ic_location_search"
+                android:textSize="17sp"
+                android:ellipsize="end"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingStart="5dp"
+                tools:ignore="RtlSymmetry" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/red"
+            android:id="@+id/distanceTextView"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="end"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/panel"
+        android:layout_above="@+id/createButton"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/routesLayout"/>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/loadingLayout"
+        android:layout_below="@+id/panel"
+        android:background="@color/white"
+        android:layout_above="@+id/createButton">
+
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/asher"
+        android:text="@string/select_date"
+        android:textSize="15sp"
+        android:id="@+id/dateButton"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="25dp"
+        android:background="@drawable/background_ash"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/search"
+        android:textSize="20sp"
+        android:id="@+id/createButton"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/border_box_r_touch"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_route_created"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:id="@+id/noText"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackFade"
+        android:visibility="gone"
+        android:id="@+id/calendarLayout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:id="@+id/lK"
+            tools:ignore="UselessParent">
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/border_box_ash">
+            </CalendarView>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:id="@+id/timeView"
+                android:background="@drawable/background_ash"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/asher"
+                android:textSize="18sp"
+                android:text="@string/select_time"
+                android:layout_marginTop="-10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/ok"
+                android:textSize="20sp"
+                android:id="@+id/okayBtn"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/border_box_r_touch"
+                android:layout_marginTop="30dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/timeViewLayout"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="400dp"
+                android:background="@drawable/border_box_ash"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="10dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:text="@string/hr"/>
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="10dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:text="@string/min"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="40dp">
+
+                    <ScrollView
+                        android:layout_width="75dp"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/hourLayout"
+                            android:orientation="vertical"
+                            tools:ignore="UselessLeaf">
+
+                        </LinearLayout>
+
+                    </ScrollView>
+
+                    <ScrollView
+                        android:layout_width="75dp"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/minLayout"
+                            android:orientation="vertical"
+                            tools:ignore="UselessLeaf">
+
+                        </LinearLayout>
+
+                    </ScrollView>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/timeSelectView"
+                    android:layout_marginTop="-40dp"
+                    android:gravity="center"
+                    android:background="@color/mainColor"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:text="@string/done"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackFade"
+        android:gravity="center"
+        android:id="@+id/blackFade"
+        android:orientation="vertical"
+        android:visibility="gone"/>
+
+</RelativeLayout>

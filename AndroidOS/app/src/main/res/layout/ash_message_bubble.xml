@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:duplicateParentState="true"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:clipChildren="false"
+    android:layout_height="wrap_content"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:duplicateParentState="true"
+        android:gravity="start"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:orientation="horizontal"
+            android:layout_marginVertical="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="10dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:duplicateParentState="true"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ash_bubble"
+                android:layout_marginEnd="80dp"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="8dp"
+                android:id="@+id/messageHolder"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:id="@+id/message"
+                    android:textSize="14sp"
+                    android:padding="4dp"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:id="@+id/date"
+            android:visibility="gone"
+            android:textSize="11sp"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/blash"
+            tools:ignore="SmallSp" />
+
+    </LinearLayout>
+</RelativeLayout>

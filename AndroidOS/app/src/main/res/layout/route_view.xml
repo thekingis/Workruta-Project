@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="74dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_ash"
+        android:padding="4dp"
+        android:orientation="horizontal"
+        android:layout_margin="3dp"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/orange_rad">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/monthTextView"
+                android:layout_marginTop="-5dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dayTextView"
+                android:layout_marginTop="-8dp"
+                android:textColor="@color/white"
+                android:textSize="35sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/yearTextView"
+                android:textColor="@color/white"
+                android:layout_marginTop="-8dp"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fromTextView"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_location_start"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:lines="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/fromTextView"
+                android:layout_above="@+id/toTextView"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="3dp"
+                android:id="@+id/statusBar"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/toTextView"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_location_end"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:lines="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.workruta.android.Views.RoundTextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/typeTextView"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="55dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@color/normalRed"
+        android:textSize="18sp"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:background="@color/whiteFade"
+        android:id="@+id/loaderLayout"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/loadingImageView"
+            android:src="@drawable/ajax_loader"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableStart="@drawable/ic_warning"
+            android:drawablePadding="5dp"
+            android:id="@+id/errorTextView"
+            android:textColor="@color/normalRed"
+            android:gravity="center_vertical"
+            android:background="@color/whiteFade"
+            android:paddingStart="30dp"
+            android:visibility="gone"
+            android:textSize="15sp"
+            android:text="@string/connection_error_click_to_retry"
+            tools:ignore="RtlSymmetry" />
+
+    </LinearLayout>
+
+</RelativeLayout>

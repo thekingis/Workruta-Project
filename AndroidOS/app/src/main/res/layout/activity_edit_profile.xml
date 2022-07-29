@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/mainView"
+    tools:context=".EditProfileActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainColor"
+        android:textSize="17sp"
+        android:text="@string/personal_info"
+        android:id="@+id/headText"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/ic_arrow_white"
+        android:padding="10dp"
+        android:textColor="@color/white"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headText"
+        android:layout_marginBottom="65dp"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/border_box"
+                android:id="@+id/firstNameET"
+                android:hint="@string/first_name"
+                android:inputType="none"
+                android:textSize="17sp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="15dp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/border_box"
+                android:id="@+id/lastNameET"
+                android:hint="@string/last_name"
+                android:inputType="none"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="15dp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/border_box"
+                android:id="@+id/addressET"
+                android:hint="@string/address"
+                android:inputType="textPostalAddress"
+                android:textSize="17sp"
+                android:gravity="center_vertical"
+                android:ellipsize="end"
+                android:drawableEnd="@drawable/ic_location_search"
+                android:paddingHorizontal="15dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/gender"
+                android:textColor="@color/mainColor"
+                android:textSize="17sp" />
+
+            <RadioGroup
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:buttonTint="@color/mainColor"
+                    android:text="@string/female"
+                    android:textSize="16sp"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:buttonTint="@color/mainColor"
+                    android:text="@string/male"
+                    android:textSize="16sp"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:id="@+id/other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:buttonTint="@color/mainColor"
+                    android:text="@string/other"
+                    android:textSize="16sp"
+                    android:textColor="@color/black" />
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/border_box"
+                android:id="@+id/passwordET"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textSize="17sp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="15dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/save"
+        android:textSize="20sp"
+        android:id="@+id/saveBtn"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/border_box_r_touch"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        tools:ignore="RelativeOverlap" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteFade"
+        android:id="@+id/whiteFade"
+        android:orientation="vertical"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/blackFade"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:background="@color/blackFade"/>
+
+</RelativeLayout>

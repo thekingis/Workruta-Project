@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.workruta.android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- uses-feature android:name="android.hardware.Camera"/ -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera2.full"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true"
+        android:theme="@style/FullScreen"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity
+            android:name=".IdentityActivity"
+            android:theme="@style/AppTheme" />"
+        tools:targetApi="m">
+        <activity
+            android:name=".OpenRouteActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".MessageActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".RouteActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".RouteSearchActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".AboutActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".EditRouteActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ForgotPassActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".FAQActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SupportActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".HistoryActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".PaymentsActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".TransactionsActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".PreviousRoutesActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".NewRouteActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".StatusActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".NotificationsActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".InboxActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ProfileActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SharedCompatActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".FinishSetupAct"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".BankAct"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".CarAct"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".CameraAct"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".LicenceAct"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ChangePhotoAct"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SignFormAct"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SigninAct"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SignupAct"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".StartAct"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".LoginAct"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".DashboardAct"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    </application>
+
+</manifest>

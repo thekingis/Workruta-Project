@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="74dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_ash"
+        android:padding="4dp"
+        android:orientation="horizontal"
+        android:layout_margin="3dp"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/orange_rad">
+
+            <com.workruta.android.Views.BackgroundChangingView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_animation_list"
+                app:borderRadius="10"
+                app:enterFadeDuration="500"
+                app:exitFadeDuration="500"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:id="@+id/fView"
+                android:layout_alignParentTop="true">
+
+                <com.workruta.android.Views.BackgroundChangingView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_animation_list"
+                    app:borderRadius="10"
+                    app:enterFadeDuration="500"
+                    app:exitFadeDuration="500"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/fView"
+                android:layout_above="@+id/sView"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="8dp">
+
+                <com.workruta.android.Views.BackgroundChangingView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_animation_list"
+                    app:borderRadius="10"
+                    app:enterFadeDuration="500"
+                    app:exitFadeDuration="500"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:id="@+id/sView"
+                android:layout_alignParentBottom="true">
+
+                <com.workruta.android.Views.BackgroundChangingView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_animation_list"
+                    app:borderRadius="10"
+                    app:enterFadeDuration="500"
+                    app:exitFadeDuration="500"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.workruta.android.Views.BackgroundChangingView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="55dp"
+        android:background="@drawable/gradient_animation_list"
+        app:borderRadius="-1"
+        app:enterFadeDuration="500"
+        app:exitFadeDuration="500"/>
+
+</RelativeLayout>

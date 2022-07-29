@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/border_box_ash"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bgImageView"
+            android:rotation="-35"
+            android:alpha="0.3"
+            android:contentDescription="@string/todo" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:id="@+id/titleTextView"
+                android:textColor="@color/black"
+                android:shadowColor="@color/mainColor"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"
+                android:layout_alignParentTop="true"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_alignParentBottom="true">
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/cupertino"
+                    android:src="@drawable/cupertino"
+                    android:layout_centerInParent="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/layout"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true">
+
+                    <com.workruta.android.Views.CornerLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="7dp"
+                        android:id="@+id/textHolder"
+                        android:layout_marginEnd="50dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/stateTextView"/>
+
+                    </com.workruta.android.Views.CornerLinearLayout>
+
+                    <com.workruta.android.Views.CornerLinearLayout
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:id="@+id/editBtn"
+                        android:layout_marginStart="-50dp"
+                        android:background="@android:drawable/dialog_holo_light_frame"
+                        android:gravity="center"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_edit"
+                            android:contentDescription="@string/todo" />
+
+                    </com.workruta.android.Views.CornerLinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

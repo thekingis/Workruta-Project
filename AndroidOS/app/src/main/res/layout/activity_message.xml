@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainView"
+    android:background="@color/mainColor"
+    tools:context=".MessageActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/header"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_arrow_white"
+            android:padding="10dp"
+            android:id="@+id/headText"/>
+
+        <com.workruta.android.Views.RoundImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/default_photo"
+            android:id="@+id/imageView"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:id="@+id/textView"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_below="@id/header"
+        android:layout_above="@+id/messageBox"
+        android:background="@drawable/message_display"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout" />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/messageBox"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="5dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/message_box">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/message"
+                android:layout_marginEnd="40dp"
+                android:id="@+id/editText"
+                android:paddingStart="5dp"
+                android:background="@color/transparent"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                tools:ignore="RtlSymmetry" />
+
+            <com.workruta.android.Views.RoundRelativeLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/mainColor"
+                android:gravity="center"
+                android:layout_marginStart="-40dp"
+                android:id="@+id/sendBtn">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_send_white"
+                    android:rotation="-45"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:contentDescription="@string/todo" />
+
+            </com.workruta.android.Views.RoundRelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.workruta.android.Views.RoundTextView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/messageBox"
+        android:id="@+id/scrollToView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/normalRed"
+        android:visibility="gone"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteFade"
+        android:gravity="center"
+        android:id="@+id/whiteFade"
+        android:orientation="vertical"/>
+
+</RelativeLayout>

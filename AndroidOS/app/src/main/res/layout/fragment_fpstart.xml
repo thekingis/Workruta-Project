@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".FPStartFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="30dp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/mainColor"
+            android:textSize="16sp"
+            android:text="@string/a_verification_code_will_the_sent_to_you"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/emailTextView"
+            android:gravity="center"
+            android:background="@drawable/border_box_touch"
+            android:layout_marginTop="50dp"
+            android:paddingVertical="8dp"
+            android:textSize="16sp"
+            android:textColor="@color/mainColor"
+            android:text="@string/get_code_through_e_mail"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/phoneTextView"
+            android:gravity="center"
+            android:background="@drawable/border_box_touch"
+            android:layout_marginTop="20dp"
+            android:paddingVertical="8dp"
+            android:textSize="16sp"
+            android:textColor="@color/mainColor"
+            android:text="@string/get_code_through_phone_number"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

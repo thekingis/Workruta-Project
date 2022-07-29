@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainView"
+    android:background="@color/white"
+    tools:context=".HistoryActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/mainColor"
+        android:text="@string/ride_history"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/ic_arrow_back"
+        android:padding="10dp"
+        android:id="@+id/headText"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/headText"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/routesLayout"/>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/loadingLayout"
+        android:orientation="vertical"
+        android:layout_below="@+id/headText">
+
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+        <include layout="@layout/loading_view"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_route_created"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:id="@+id/noText"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackFade"
+        android:visibility="gone"
+        android:id="@+id/calendarLayout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:id="@+id/lK"
+            tools:ignore="UselessParent">
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/border_box_ash">
+            </CalendarView>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:id="@+id/timeView"
+                android:background="@drawable/background_ash"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/asher"
+                android:textSize="18sp"
+                android:text="@string/select_time"
+                android:layout_marginTop="-10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/recreate"
+                android:textSize="20sp"
+                android:visibility="gone"
+                android:id="@+id/okayBtnW"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/border_box_r_touch"
+                android:layout_marginTop="30dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/timeViewLayout"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="400dp"
+                android:background="@drawable/border_box_ash"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="10dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:text="@string/hr"/>
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="10dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:text="@string/min"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="40dp">
+
+                    <ScrollView
+                        android:layout_width="75dp"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/hourLayout"
+                            android:orientation="vertical"
+                            tools:ignore="UselessLeaf">
+
+                        </LinearLayout>
+
+                    </ScrollView>
+
+                    <ScrollView
+                        android:layout_width="75dp"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/minLayout"
+                            android:orientation="vertical"
+                            tools:ignore="UselessLeaf">
+
+                        </LinearLayout>
+
+                    </ScrollView>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/timeSelectView"
+                    android:layout_marginTop="-40dp"
+                    android:gravity="center"
+                    android:background="@color/mainColor"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:text="@string/done"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/hault"
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:textSize="15sp"
+                    android:text="@string/number_of_passengers_allowed"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/passNum"
+                    android:textColor="@color/black"
+                    android:inputType="number"
+                    android:textSize="17sp"
+                    android:background="@drawable/border_box"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:layout_marginStart="10dp"
+                    tools:ignore="RtlSymmetry" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/make_this_ride_free"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp"
+                    android:buttonTint="@color/mainColor"
+                    android:id="@+id/freeRideBox"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/recreate"
+                    android:textSize="20sp"
+                    android:layout_marginStart="40dp"
+                    android:id="@+id/okayBtn"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/border_box_r_touch" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackFade"
+        android:gravity="center"
+        android:id="@+id/blackFade"
+        android:orientation="vertical"
+        android:visibility="gone"/>
+
+</RelativeLayout>

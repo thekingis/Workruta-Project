@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="@drawable/message_list_background"
+        tools:ignore="UselessParent">
+
+        <com.workruta.android.Views.CornerLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/container"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            tools:ignore="UselessParent">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/imageView"
+                android:layout_marginVertical="10dp"
+                android:contentDescription="@string/todo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:maxLines="2"
+                    android:ellipsize="end"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/optionLayout"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:layout_marginVertical="5dp"
+                    android:gravity="end">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/acceptBtn"
+                            android:backgroundTint="@color/green"
+                            android:textColor="@color/white"
+                            android:text="@string/accept"
+                            android:layout_marginHorizontal="10dp"
+                            android:paddingHorizontal="10dp" />
+
+                        <pl.droidsonroids.gif.GifImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:visibility="invisible"
+                            android:id="@+id/acceptBtnImg"
+                            android:src="@drawable/cupertino"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="@string/todo" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rejectBtn"
+                            android:backgroundTint="@color/normalRed"
+                            android:textColor="@color/white"
+                            android:text="@string/reject"
+                            android:layout_marginHorizontal="10dp"
+                            android:paddingHorizontal="10dp"/>
+
+                        <pl.droidsonroids.gif.GifImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:visibility="invisible"
+                            android:id="@+id/rejectBtnImg"
+                            android:src="@drawable/cupertino"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="@string/todo" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dateTextView"
+                    android:textColor="@color/asher"
+                    android:textSize="13sp"
+                    android:lines="1"
+                    android:gravity="end"/>
+
+            </LinearLayout>
+
+        </com.workruta.android.Views.CornerLinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

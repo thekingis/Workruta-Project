@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:layout_gravity="center"
+        android:background="@drawable/border_rad"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:id="@+id/textView"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:gravity="end"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/negative"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:layout_marginHorizontal="10dp"
+                android:paddingHorizontal="10dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/positive"
+                android:backgroundTint="@color/mainColor"
+                android:textColor="@color/white"
+                android:layout_marginHorizontal="10dp"
+                android:paddingHorizontal="10dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

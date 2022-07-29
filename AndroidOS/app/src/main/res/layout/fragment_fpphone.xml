@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainView"
+    android:background="@color/white"
+    tools:context=".FPPhoneFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/border_box"
+            android:layout_marginHorizontal="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:text="@string/_1"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:paddingStart="15dp"
+                android:layout_marginEnd="10dp"
+                android:drawablePadding="5dp"
+                android:textSize="17sp"
+                app:drawableStartCompat="@drawable/usa_mini"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:textColor="@color/black"
+                android:hint="@string/_508_712_3456"
+                android:paddingEnd="15dp"
+                android:inputType="number"
+                android:id="@+id/phoneNumber"
+                android:textSize="17sp"
+                tools:ignore="RtlSymmetry,TextFields" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/errorLog"
+            android:textColor="@color/normalRed"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="40dp"
+            android:textSize="16sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/mainColor"
+        android:text="@string/get_code_from_email"
+        android:textSize="14sp"
+        android:padding="5dp"
+        android:id="@+id/switchPage"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/get_code"
+        android:textSize="20sp"
+        android:id="@+id/submit"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/border_box_r_touch"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        tools:ignore="RelativeOverlap" />
+
+</RelativeLayout>

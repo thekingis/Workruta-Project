@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".RouteActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/mainColor"
+        android:text="@string/route_details"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/ic_arrow_back"
+        android:padding="10dp"
+        android:id="@+id/headText"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headText"
+        android:layout_above="@+id/bottomSheet"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/border_box_ash"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="25dp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="5dp"
+                android:id="@+id/resultLayout"
+                android:paddingTop="70dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginVertical="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sendMessage"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_ash"
+                        android:layout_marginHorizontal="1dp"
+                        android:textColor="@color/asher"
+                        android:textSize="17sp"
+                        android:paddingVertical="10dp"
+                        android:gravity="center"
+                        android:text="@string/send_message"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/viewProfile"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_ash"
+                        android:layout_marginHorizontal="1dp"
+                        android:textColor="@color/asher"
+                        android:textSize="17sp"
+                        android:paddingVertical="10dp"
+                        android:gravity="center"
+                        android:text="@string/view_profile"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.workruta.android.Views.ParallelogramTextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/nameTextView"
+                android:background="@drawable/border_rad_right_blue"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:gravity="center_vertical"
+                android:paddingStart="35dp"
+                android:paddingEnd="25dp"
+                android:textColor="@color/white"
+                android:textSize="19sp"/>
+
+            <com.workruta.android.Views.RoundImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/imgView"
+                android:background="@drawable/default_photo"
+                android:layout_marginTop="10dp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/dummyLayout"
+        android:visibility="gone"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomSheet"
+        android:visibility="invisible"
+        android:background="@drawable/top_rad_border"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="-1dp"
+        android:animateLayoutChanges="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:gravity="center"
+            android:id="@+id/menuBtn"
+            android:background="@drawable/menu_touch">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:rotation="90"
+                android:id="@+id/imageBtn"
+                android:src="@drawable/ic_dot_box"
+                android:contentDescription="@string/todo" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/menuLayout"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteFade"
+        android:id="@+id/whiteFade"
+        android:orientation="vertical"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/blackFade"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:background="@color/blackFade"/>
+
+</RelativeLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border_box_ash"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="25dp"
+            android:paddingBottom="5dp"
+            android:paddingHorizontal="5dp"
+            android:paddingTop="33dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="65dp"
+                android:id="@+id/phoneTextView"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_contact_phone"
+                android:textSize="16sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="65dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/fromTextView"
+                        android:drawablePadding="5dp"
+                        android:drawableStart="@drawable/ic_location_start"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_vertical"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/toTextView"
+                        android:drawablePadding="5dp"
+                        android:drawableStart="@drawable/ic_location_end"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/orangeView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="43dp"
+            android:background="@drawable/orange_rad">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/monthTextView"
+                android:layout_marginTop="-5dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dayTextView"
+                android:layout_marginTop="-8dp"
+                android:textColor="@color/white"
+                android:textSize="35sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/yearTextView"
+                android:textColor="@color/white"
+                android:layout_marginTop="-8dp"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="20dp"
+            android:id="@+id/costTextView"
+            android:layout_below="@+id/orangeView"
+            android:background="@color/normalRed"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"/>
+
+        <com.workruta.android.Views.ParallelogramTextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/nameTextView"
+            android:background="@drawable/border_rad_right_blue"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:gravity="center_vertical"
+            android:paddingStart="35dp"
+            android:paddingEnd="25dp"
+            android:textColor="@color/white"
+            android:textSize="19sp"/>
+
+        <com.workruta.android.Views.RoundImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imgView"
+            android:background="@drawable/default_photo"
+            android:layout_marginTop="10dp"/>
+
+        <com.workruta.android.Views.RoundTextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/mainColor"
+            android:id="@+id/open"
+            android:gravity="center"
+            android:padding="5dp"
+            android:drawableStart="@drawable/ic_arrow_forward"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/distanceTextView"
+            android:layout_marginHorizontal="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/border_box_ash"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/asher"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

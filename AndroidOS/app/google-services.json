@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1014418314219",
+    "firebase_url": "https://messenger-4d502-default-rtdb.firebaseio.com",
+    "project_id": "messenger-4d502",
+    "storage_bucket": "messenger-4d502.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1014418314219:android:d6890899ac39ec8640bfae",
+        "android_client_info": {
+          "package_name": "com.workruta.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1014418314219-5gtcon1topllep8lpc249u17r2quq06e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.workruta.android",
+            "certificate_hash": "40bf18429c322d6340e953b2582b58fff1dc46ab"
+          }
+        },
+        {
+          "client_id": "1014418314219-ifscobos8fu2jslietql0pnsv49fnnd7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWLyVRDqrpaajALaqwr031Vkfh7dZaVYs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1014418314219-ifscobos8fu2jslietql0pnsv49fnnd7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1014418314219-fa4so1ruh439tjikt03mni2ebbc0d8iv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.workruta.ios"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

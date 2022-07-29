@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_margin="4dp"
+        android:background="@drawable/message_list_background"
+        tools:ignore="UselessParent">
+
+        <com.workruta.android.Views.RoundRelativeLayout
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@color/mainColor"
+            android:gravity="center">
+
+            <com.workruta.android.Views.RoundImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imageView"
+                android:background="@drawable/default_photo"/>
+
+        </com.workruta.android.Views.RoundRelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nameTextView"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:layout_marginEnd="90dp"/>
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dateTextView"
+                    android:textColor="@color/asher"
+                    android:textSize="13sp"
+                    android:lines="1"
+                    android:gravity="end"
+                    android:layout_marginStart="-80dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/messageTextView"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:lines="1"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="5dp"
+                    android:layout_marginEnd="30dp"
+                    android:ellipsize="end"/>
+
+                <com.workruta.android.Views.RoundTextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/unseenTV"
+                    android:background="@color/mainColor"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:layout_marginStart="-20dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
