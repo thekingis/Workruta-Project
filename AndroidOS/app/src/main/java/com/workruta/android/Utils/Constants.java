@@ -13,7 +13,7 @@ public class Constants {
     public static final String[] allowedExtImg = {".jpg", ".jpeg", ".gif", ".png", ".bmp"};
     public static final String country = "US";
     public static final String firebaseUrl = "https://messenger-4d502-default-rtdb.firebaseio.com/";
-    public static final String mapAPIKey = "AIzaSyAdIaSIsX5Gedq3gQTk46Kny9XEirPQrDk";
+    public static final String mapAPIKey = "AIzaSyDJjJAGxA82xd8FlatRWI14GqGRHZr5BSo";
     public static final String stripeSKTestAPIKey = "sk_test_51L6UkaDr3vMd0jcT0dD0qx4WNg7vQaeOuSyNJIBmcLhZIUX7RFGuawRHti57arqAaL7MQReuOphLDRPgui0gEuil002IPOV1Sv";
     public static final String stripePKTestAPIKey = "pk_test_51L6UkaDr3vMd0jcT6EbNrz5WVWtJe4Xwv6iRrgUTCQKx42TSBPCwVX5H8kW51F7xcmpb4hRcbhxquMp8eRgLagt100e1AfO3D2";
     public static final String stripeSKLiveAPIKey = "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";
