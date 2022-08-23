@@ -22,7 +22,7 @@ class Constants {
     public static let stripePKTestAPIKey = "pk_test_51L6UkaDr3vMd0jcT6EbNrz5WVWtJe4Xwv6iRrgUTCQKx42TSBPCwVX5H8kW51F7xcmpb4hRcbhxquMp8eRgLagt100e1AfO3D2"
     public static let stripeSKLiveAPIKey = "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"
     public static let stripePKLiveAPIKey = "pk_live_51L6UkaDr3vMd0jcTdVlNnoBzraA66rLsIKDENPNgTdj53n1P6aGbTJZj8GJaW7kqO1aeimofa2bSCNvYYfDk2x8500zTlrKxJH"
-    public static let mapAPIKey = "AIzaSyAdIaSIsX5Gedq3gQTk46Kny9XEirPQrDk"
+    public static let mapAPIKey = "AIzaSyDJjJAGxA82xd8FlatRWI14GqGRHZr5BSo"
     public static let socketUrl = "http://34.127.44.170:8080/"
     public static let www = "http://workruta.ng/"
     private static let rootUrl = www + "app/"
